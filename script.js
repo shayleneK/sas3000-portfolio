@@ -14,11 +14,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const target = document.getElementById('target');
     const skills = document.querySelector(".skills");
     const progressBars = document.querySelectorAll('.progress-bar');
+    const main = document.getElementById('welcome');
+    const nav = document.getElementById('nav-bar');
 
     const observerOptions = {
         root: null, // Default is the viewport
         rootMargin: '0px',
         threshold: 1 // Trigger when 10% of the target is visible
+    };
+
+    const observerOptions2 = {
+        root: null, // Default is the viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the target is visible
     };
 
     const observerCallback = (entries, observer) => {
@@ -28,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Trigger all progress bars
                 progressBars.forEach(bar => {
                     const key = bar.id;
-                    console.log(key);
                     bar.style.width = progress[key];
                 });
             } else {
@@ -41,9 +48,30 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
 
+    const observerCallback2 = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log('Main is visible');
+                    nav.classList.remove('hidden');
+            } else {
+                console.log('Main is not visible');
+                // Optionally reset all progress bars
+                    nav.classList.add('hidden');
+
+            }    
+        });
+    };
+
+    
+
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
+    const observer2 = new IntersectionObserver(observerCallback2, observerOptions2);
+
+
     observer.observe(target);
+
+    observer2.observe(main);
 });
 
 jQuery(function(){
