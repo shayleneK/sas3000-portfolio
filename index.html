@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Shay Kintanar</title>
 </head>
 
@@ -20,9 +21,23 @@
             <li><a href="#Contact">Contact</a></li>
         </ul>
     </div> -->
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">Shay Kintanar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>  
+      </nav>
     <div class="section" id="welcome">
-        HELLO WORLD, I'M <br>
-        <span class="accent">SHAY KINTANAR</span>
+        <span id="welcome-1"></span>
+        <span class="accent" id="welcome-2"></span>
     </div>
     <div class="section" id="about-me">
         <img src="Shay.JPG" alt="picture of Me!">
@@ -41,72 +56,97 @@
                 <div class="skill">
                     HTML5
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="HTML"></div>
+                        <div class="my-progress-bar" id="HTML"></div>
                     </div>
                 </div>
                 <div class="skill">
                     CSS
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="CSS"></div>
+                        <div class="my-progress-bar" id="CSS"></div>
                     </div>
                 </div>
                 <div class="skill">
                     C
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="C"></div>
+                        <div class="my-progress-bar" id="C"></div>
                     </div>
                 </div>
                 <div class="skill">
                     Java
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="Java"></div>
+                        <div class="my-progress-bar" id="Java"></div>
                     </div>
                 </div>
                 <div class="skill">
                     Python
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="Python"></div>
+                        <div class="my-progress-bar" id="Python"></div>
                     </div>
                 </div>
             </div>
             <div class="skills-row">
                 <div class="skill">
-                    SQL
+                    SQL 
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="SQL"></div>
+                        <div class="my-progress-bar" id="SQL"></div>
                     </div>
                 </div>
                 <div class="skill">
                     MongoDB
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="MongoDB"></div>
+                        <div class="my-progress-bar" id="MongoDB"></div>
                     </div>
                 </div>
                 <div class="skill">
                     NodeJS
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="NodeJs"></div>
+                        <div class="my-progress-bar" id="NodeJs"></div>
                     </div>
                 </div>
                 <div class="skill">
                     Express
                     <div class="progress-container" id="target">
-                        <div class="progress-bar" id="Express"></div>
+                        <div class="my-progress-bar" id="Express"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="section" id="projects">
-        <h1>MY PROJECTS</h1>
-        <div class="projects-slider">
-            <img src="./images/1.png" alt="">
-            <img src="./images/2.png" alt="">
-            <img src="./images/3.png" alt="">
-            <img src="./images/4.png" alt="">
+        <h1>MY PROJECTS</h1><br>
+        <div class="project-container">
+            <div class="slider-container">
+                <div class="projects-slick" id="slider">
+                    <img src="images\1.png" alt="">
+                    <img src="images\2.png" alt="">
+                    <img src="images\3.png" alt="">
+                    <img src="images\4.png" alt="">
+                </div>
+                <div class="slider-buttons">
+                    <button class="left"> < </button>
+                    <button class="right">></button>
+                </div>
+            </div>
+            <div class="project-desc">
+                <span class="project-title">Game using GameMaker2</span> <img id="project-link" src="images\drive.png" alt="">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta temporibus, dolores esse porro deleniti voluptate facilis modi quisquam corrupti! Earum exercitationem, quasi quidem delectus tempore natus nostrum sapiente neque rem!</p>
+            </div>
+        </div>     
+    </div>
+    <div class="section" id="footer">
+        <div class="contacts-container">
+            <span class="contact-email"><h1>shaykintanar@gmail.com</h1></span>
+            <div class="contact-links">
+                <a href="https://github.com/shayleneK?tab=repositories"><img src="images\github.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/shay-kintanar-07b53b30b/"><img src="images\linkedIn.png" alt=""></a>
+                <a href="https://www.facebook.com/shay.kintanar"><img src="images\facebook.png" alt=""></a>
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
 </html>
