@@ -413,38 +413,28 @@ body {
     width: 25px;
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 850px) {
     .section {
         height: auto;
     }
 
-    #welcome-1, #welcome-2 {
-        font-size: 7vh;
+    #welcome {
+        height: 80vh;
     }
 
     #about-me {
         flex-direction: column;
         align-items: center;
         gap: 2vh;
+        padding-bottom: 5vh;
     }
 
     .description {
         width: 100%;
     }
 
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skills-row {
-        width: 100%;
-    }
-
-    .skill {
-        width: 100%;
-        min-width: 200px;
+    .description p {
+        font-size: 3vh;
     }
 
     #project {
@@ -466,5 +456,44 @@ body {
 
     .project-desc {
         padding: 0vh 10vh;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        height: auto;
+    }
+
+    #welcome-1, #welcome-2 {
+        font-size: 7vh;
+    }
+
+    #about-me {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .description p {
+        font-size: 3vh;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-row {
+        width: 100%;
+    }
+
+    .skill {
+        width: 100%;
+        min-width: 200px;
     }
 }
