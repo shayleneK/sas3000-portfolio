@@ -2,8 +2,13 @@
 
 :root {
     --clr-bg: #191919;
+    --clr-dark: #292929;
     --clr-light: #FFFFFF;
+    /* --clr-primary: #ae7cc4; */
     --clr-primary: #A488A4;
+    /* --clr-primary: #ad72ad; */
+    --clr-secondary: #58B2A8;
+
 }
 
 *,
@@ -38,6 +43,12 @@ body {
     justify-content: center;
 }
 
+.line {
+    width: 3vh;
+    height: 3px;
+    background-color: var(--clr-primary);
+}
+
 #welcome {
     font-family: 'Antonio';
     font-weight: bold;
@@ -47,6 +58,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 
 }
 
@@ -57,19 +69,24 @@ body {
 } */
 
 .accent {
+    display: inline;
+    border-bottom: 2px solid var(--clr-secondary);
+}
+
+#welcome .accent {
     color: var(--clr-primary);
-    border-bottom: 2px solid var(--clr-light);
 }
 
 #about-me {
     padding-top: 10vh;
+    flex-wrap: wrap;
     align-items: flex-start;
+    background-color: #292929;
 }
 
 #about-me img{
-    max-width: 20%;
+    max-width: 25%;
     object-fit: contain;
-    padding: 0px 10vh 0px;
 }
 
 .description{
@@ -79,11 +96,13 @@ body {
     color: var(--clr-light);
     font-family: 'Arimo';
     font-size: 20px;
+    padding: 0vh 10vh;
 
     gap: 10vh;
 }
 
 .description h1{
+    display: flex;
     font-family: 'Antonio';
 }
 
@@ -92,8 +111,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     background-color: var(--clr-light);
-    padding: 10vh 0vh;
-    height: 120vh;
+    padding: 5vh 0vh;
 }
 
 #skills h1{
@@ -105,6 +123,7 @@ body {
 
 .skills-container {
     display: flex;
+    flex-wrap: wrap;
     /* text-decoration: underline black; */
 
 }
@@ -115,7 +134,7 @@ body {
 
     flex-direction: column;
     width: 50%;
-    padding: 10vh;
+    padding: 5vh 10vh;
     gap: 5vh;
 }
 
@@ -123,7 +142,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Arimo';
-    gap: 2vh;
+    gap: 1vh;
 }
 
 #projects {
@@ -149,8 +168,8 @@ body {
 .my-progress-bar {
     width: 0%;
     font-size: 2vh;
-    color: var(--clr-primary);
-    height: 30px;
+    color: rgb(75, 86, 59);
+    height: 3vh;
     display: flex;
     padding-left: 1vh;
     font-family: 'Arimo';
@@ -181,19 +200,49 @@ body {
 .project-desc {
     display: flex;
     flex-direction: column;
-    padding-left: 10vh;
+    padding: 0vh 20vh;
+}
+
+.project-highlight {
+    display: flex;
+    align-items: center;
 }
 
 .project-title {
     font-family: 'Antonio';
-    font-size: 5vh;
+    font-size: 8vh;
     color: var(--clr-primary);
+}
+
+#project-tags {
+    display: flex;
+    gap: 1vh;
     padding-bottom: 3vh;
+
+}
+
+.project-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+    padding: 5px 10px;
+    font-size: 2vh;
+    color: var(--clr-light);
 }
 
 #project-link{
+    display: flex;
     width: 3vh;
-    height: 3vh;
+    height: 9vh;
+    padding-bottom: 3vh;
+
+}
+
+#project-link img{
+    height: 25px;
+    width: 25px;
 }
 
 .slider-container {
@@ -240,10 +289,14 @@ body {
 
 .navbar-nav {
     gap: 2vh;
+    color: var(--clr-primary);
+    font-family: 'Antonio';
 }
 
 .navbar-nav a{
     color: var(--clr-primary);
+    font-family: 'Antonio';
+    font-size: 3vh;
     text-decoration: none;
 }
 
@@ -347,11 +400,71 @@ body {
 
 .contact-links{
     display: flex;
-    padding: 2vh;
+    margin: 2vh 0vh;
     gap: 2vh;
 }
 
+.contact-links a {
+    display: flex;
+}
+
 .contact-links img {
-    height: 4vh;
-    width: 4vh;
+    height: 25px;
+    width: 25px;
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        height: auto;
+    }
+
+    #welcome-1, #welcome-2 {
+        font-size: 7vh;
+    }
+
+    #about-me {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-row {
+        width: 100%;
+    }
+
+    .skill {
+        width: 100%;
+        min-width: 200px;
+    }
+
+    #project {
+        padding: 0vh 10vh;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider-container {
+        width: 60%;
+    }
+    
+    .project-title {
+        font-size: 5vh;
+    }
+
+    .project-desc {
+        padding: 0vh 10vh;
+    }
 }

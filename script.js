@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressBars = document.querySelectorAll('.my-progress-bar');
     const main = document.getElementById('welcome');
     const nav = document.getElementById('nav-bar');
+    var welcome1 = false;
 
     function typeWriter(elemID, txt) {    
-        var i = 0;
+  
+            var i = 0;
         var speed = 50;
     
         function type() {
@@ -30,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     
         type();
-
-    }
+    
+        }
 
     const observerOptions = {
         root: null, // Default is the viewport
@@ -61,9 +63,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const observerCallback2 = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log("should be typing");
-                typeWriter("welcome-1", "HELLO WORLD, I'M");
-                typeWriter("welcome-2", "SHAY KINTANAR");
+                    if(document.getElementById("welcome-1").innerText != "HELLO WORLD I'M") {
+                        typeWriter("welcome-1", "HELLO WORLD, I'M");
+                        typeWriter("welcome-2", "SHAY KINTANAR");
+                    }
+                    
+                    // typeWriter("welcome-1", "HELLO WORLD, I'M");
+                    // setTimeout(() => {
+                    //     console.log("Starting second typewriter.");
+                    //     typeWriter("welcome-2", "SHAY KINTANAR");
+                    // }, "HELLO WORLD, I'M".length * 50 + 3);
+
+                    observer.disconnect();
             }
         });
     };
@@ -98,10 +109,17 @@ jQuery(function () {
     });
 
     var texts = [
-        "GameMaker",
+        "'i promise'",
+        "ILabs",
+        "Concert Management",
+        "Fetal Health Classification"
+    ]
+
+    var links = [
+        "https://drive.google.com/drive/u/1/search?q=dvap",
         "Lab Reservation System",
-        "SQL Database",
-        "Classification Task"
+        "https://github.com/shayleneK/-CCINFOM-Concert-Management-System",
+        "https://colab.research.google.com/drive/1w5xNHNAes3oVD_nNunwubbbw1ODW0BFS?authuser=1#scrollTo=4-Yuyqo2vDKl"
     ]
 
     var images = [
@@ -111,16 +129,38 @@ jQuery(function () {
         "images/drive.png"
     ]
 
-    $('.projects-slider').on('afterChange', function(event, slick, currentSlide){
+    var descriptions = [
+        "A mini story game highlighting personal reflections on love and commitment. This game was made through GameMaker Studio 2.",
+        "ILabs, a laboratory reservation system with both client and laboratory technician views that handles the creation and management of laboratory reservations.",
+        "A concert management system allowing the operation of concert venues, concert, and tickets. A project eperimenting the functions and implementation of the SQL database.",
+        "A classification task that uses machine learning algorithms to classify the health of a fetus according to 2126 records of features taken from cardiotocogram exams."
+    ]
+
+    var projectTags = [
+        ["GameMaker 2", "GML"],
+        ["HTML", "CSS", "MongoDB", "Ajax", "NodeJS", "Express"],
+        ["HTML", "JSP", "SQL", "Java"],
+        ["Python"]
+    ]
+
+    $('.projects-slick').on('afterChange', function(event, slick, currentSlide){
+        var tags = projectTags[currentSlide];
+
         $('.project-title').text(texts[currentSlide]);
-        $('#project-link').attr("src", images[currentSlide]);
+        $('#project-link img').attr("src", images[currentSlide]);
+        $('#project-description').text(descriptions[currentSlide]);
+
+        $('#project-tags').text("");
+        for (let tag of tags) {
+            $('#project-tags').append("<span class='project-tag'>" + tag + '</span>');
+        }
     });
     
     $('.my-progress-bar').hover(function() {
         const key = $(this).attr('id');
-        $(this).css("background-color", "#dabbda");
+        $(this).css("color", "#fff");
+        $(this).css("background-color", "#58B2A8");
         $(this).text(progress[key]);
-        console.log(progress[key]);
     }, function(){
         $(this).css("background-color", "#A488A4");
         $(this).text("");
