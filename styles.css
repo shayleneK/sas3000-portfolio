@@ -443,11 +443,14 @@ body {
 
     .project-container {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     .slider-container {
-        width: 60%;
+        width: 70%;
+        padding: 1vh 0vh;
+        padding-left: 10vh;
     }
     
     .project-title {
@@ -495,5 +498,9 @@ body {
     .skill {
         width: 100%;
         min-width: 200px;
+    }
+
+    .project-tags {
+        flex-wrap: wrap;
     }
 }
