@@ -216,6 +216,7 @@ body {
 
 #project-tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 1vh;
     padding-bottom: 3vh;
 
