@@ -12,6 +12,7 @@ var progress = {
 
 document.addEventListener("DOMContentLoaded", function () {
     const target = document.getElementById('target');
+    const navbar = document.getElementById('navbar');
     const skills = document.querySelector(".skills");
     const progressBars = document.querySelectorAll('.my-progress-bar');
     const main = document.getElementById('welcome');
@@ -63,18 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const observerCallback2 = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                    if(document.getElementById("welcome-1").innerText != "HELLO WORLD I'M") {
+                console.log("nosteen");
+
+                console.log(entry);
+                    if(document.getElementById("welcome-1").innerHTML != "HELLO WORLD, I'M") {
                         typeWriter("welcome-1", "HELLO WORLD, I'M");
                         typeWriter("welcome-2", "SHAY KINTANAR");
-                    }
-                    
-                    // typeWriter("welcome-1", "HELLO WORLD, I'M");
-                    // setTimeout(() => {
-                    //     console.log("Starting second typewriter.");
-                    //     typeWriter("welcome-2", "SHAY KINTANAR");
-                    // }, "HELLO WORLD, I'M".length * 50 + 3);
-
-                    observer.disconnect();
+                    } 
+                    navbar.classList.add("navbar-expand-md");
+            }else {
+                navbar.classList.remove("navbar-expand-md");
             }
         });
     };
@@ -148,6 +147,7 @@ jQuery(function () {
 
         $('.project-title').text(texts[currentSlide]);
         $('#project-link img').attr("src", images[currentSlide]);
+        $('#project-link a').attr("href", links[currentSlide]);
         $('#project-description').text(descriptions[currentSlide]);
 
         $('#project-tags').text("");
@@ -159,10 +159,8 @@ jQuery(function () {
     $('.my-progress-bar').hover(function() {
         const key = $(this).attr('id');
         $(this).css("color", "#fff");
-        $(this).css("background-color", "#58B2A8");
         $(this).text(progress[key]);
     }, function(){
-        $(this).css("background-color", "#A488A4");
         $(this).text("");
       });
 });

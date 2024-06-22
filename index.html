@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Shay Kintanar</title>
 </head>
 
@@ -21,20 +22,22 @@
             <li><a href="#Contact">Contact</a></li>
         </ul>
     </div> -->
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="#">Shay Kintanar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </div>  
-      </nav>
+    <div class="nav-container" id="nav-container">
+        <nav id="navbar" class="navbar navbar-expand-md">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"><img src="images\logo.png" alt=""></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
     <div class="section" id="welcome">
         <span id="welcome-1"></span>
         <span class="accent" id="welcome-2"></span>
@@ -42,12 +45,14 @@
             <a href="https://github.com/shayleneK?tab=repositories"><img src="images\github.png" alt=""></a>
             <a href="https://www.linkedin.com/in/shay-kintanar-07b53b30b/"><img src="images\linkedIn.png" alt=""></a>
             <a href="https://www.facebook.com/shay.kintanar"><img src="images\facebook.png" alt=""></a>
-        </div>  
+        </div>
     </div>
     <div class="section" id="about-me">
         <img src="Shay.JPG" alt="picture of Me!">
         <div class="description">
-            <span class="accent"><h1>About Me</h1></span>
+            <span class="gradient-underline">
+                <h1>About Me</h1>
+            </span>
             <p>Hey! I'm Shaylene Kintanar, an undergraduate student studying computer science majoring in software
                 technology in De La Salle University. <br><br> Throughout my undergraduate studies, I have both school
                 and side projects, highlighting my passion to learn about technology and programming. I aim to continue
@@ -91,7 +96,7 @@
             </div>
             <div class="skills-row">
                 <div class="skill">
-                    SQL 
+                    SQL
                     <div class="progress-container" id="target">
                         <div class="my-progress-bar" id="SQL"></div>
                     </div>
@@ -128,8 +133,9 @@
                     <img src="images\4.png" alt="">
                 </div>
                 <div class="slider-buttons">
-                    <button class="left"> < </button>
-                    <button class="right">></button>
+                    <button class="left">
+                        < </button>
+                            <button class="right">></button>
                 </div>
             </div>
             <div class="project-desc">
@@ -139,26 +145,39 @@
                 <div id="project-tags">
                     <span class="project-tag">GameMaker 2</span> <span class="project-tag">GML</span>
                 </div>
-                    <div id="project-link"><a href="https://drive.google.com/file/d/1EKcwoJPU5eHTHPd9Ld-hZCubSBzuZvfj/view?usp=sharing"><img src="images\drive.png" alt=""></a></div>
-                    <p id="project-description">A mini story game highlighting personal reflections on love and commitment. This game was made through GameMaker Studio 2.</p>
-                </div>
+                <div id="project-link"><a
+                        href="https://drive.google.com/file/d/1EKcwoJPU5eHTHPd9Ld-hZCubSBzuZvfj/view?usp=sharing"><img
+                            src="images\drive.png" alt=""></a></div>
+                <p id="project-description">A mini story game highlighting personal reflections on love and commitment.
+                    This game was made through GameMaker Studio 2.</p>
             </div>
-        </div>     
+        </div>
+    </div>
     </div>
     <div class="section" id="footer">
         <div class="contacts-container">
-            <span class="contact-email"><h1>shaykintanar@gmail.com</h1></span>
+            <span class="contact-email">
+                <h1>shaykintanar@gmail.com</h1>
+            </span>
             <div class="contact-links">
                 <a href="https://github.com/shayleneK?tab=repositories"><img src="images\github.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/shay-kintanar-07b53b30b/"><img src="images\linkedIn.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/shay-kintanar-07b53b30b/"><img src="images\linkedIn.png"
+                        alt=""></a>
                 <a href="https://www.facebook.com/shay.kintanar"><img src="images\facebook.png" alt=""></a>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
+
 </html>

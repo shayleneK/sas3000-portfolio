@@ -4,11 +4,9 @@
     --clr-bg: #191919;
     --clr-dark: #292929;
     --clr-light: #FFFFFF;
-    /* --clr-primary: #ae7cc4; */
     --clr-primary: #A488A4;
-    /* --clr-primary: #ad72ad; */
-    --clr-secondary: #58B2A8;
-
+    --clr-secondary: #C45E72;
+    --clr-gradient:  #754276, #C45E72, #9E3BA4, #A296FE;
 }
 
 *,
@@ -62,6 +60,12 @@ body {
 
 }
 
+#welcome-1, #welcome-2 {
+    background: linear-gradient(to right, var(--clr-gradient)); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+
 /* #welcome-1, #welcome-2 {
     background-color: #161616;
     padding: 2vh;
@@ -70,7 +74,7 @@ body {
 
 .accent {
     display: inline;
-    border-bottom: 2px solid var(--clr-secondary);
+    border-bottom: 2px solid var(--clr-light);
 }
 
 #welcome .accent {
@@ -82,6 +86,26 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     background-color: #292929;
+}
+
+#about-me h1 {
+    color: var(--clr-light);
+    
+}
+
+.gradient-underline {
+    display: inline-block;
+    position: relative;
+}
+
+.gradient-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust to place the underline closer to the text */
+    width: 100%;
+    height: 3px; /* Adjust thickness of the underline */
+    background: linear-gradient(to right, var(--clr-gradient));
 }
 
 #about-me img{
@@ -118,7 +142,6 @@ body {
     font-family: 'Antonio';
     padding-left: 10vh;
     font-size: 8vh;
-    text-decoration: underline var(--clr-primary) 2px;
 }
 
 .skills-container {
@@ -156,7 +179,6 @@ body {
     padding-left: 10vh;
     font-family: 'Antonio';
     font-size: 8vh;
-    text-decoration: underline var(--clr-primary) 2px;
 }
 
 .progress-container {
@@ -174,7 +196,7 @@ body {
     padding-left: 1vh;
     font-family: 'Arimo';
     align-items: center;
-    background-color: var(--clr-primary);
+    background: linear-gradient(to right, var(--clr-gradient)); 
     transition: width 1s ease-out;
     transition: 0.5s;
     border-radius: 10px;
@@ -206,12 +228,15 @@ body {
 .project-highlight {
     display: flex;
     align-items: center;
+    padding-bottom: 2vh;
 }
 
 .project-title {
     font-family: 'Antonio';
-    font-size: 8vh;
-    color: var(--clr-primary);
+    font-size: 6vh;
+    background: linear-gradient(to right, var(--clr-gradient)); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
 }
 
 #project-tags {
@@ -227,7 +252,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: var(--clr-primary);
+    background-color: var(--clr-secondary);
     padding: 5px 10px;
     font-size: 2vh;
     color: var(--clr-light);
@@ -279,13 +304,34 @@ body {
     content: '>';
 }
 
+.nav-container {
+    position: fixed;
+    display: flex;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+
+
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 4vh
+}
+
 .navbar {
-    background-color: #292929;
-    color: #A488A4;
+    background: linear-gradient(to top, rgb(28, 28, 28), rgb(20, 20, 20)); 
+        border-radius: 20px;
     gap: 5vh;
+    width: 89px;
+
     /* align-self: center;
-    box-shadow: 3px 3px 20px 10px#212121 inset;
-    transition: width 0.5s ease-in; */
+    box-shadow: 3px 3px 20px 10px#212121 inset; */
+    transition: width 0.3s ease; 
+}
+
+.navbar.navbar-expand-md {
+    transition: width 0.3s ease; 
+    width: 396px;
 }
 
 .navbar-nav {
@@ -294,8 +340,20 @@ body {
     font-family: 'Antonio';
 }
 
+
+.navbar-toggler-icon img {
+    max-width: 100%;
+}
+
+.navbar-toggler {
+    transition: transform 0.3s ease-in-out; /* Add transition to the transform property */
+}
+
+.navbar-toggler.collapsed {
+    transform: rotate(180deg); /* Apply rotation to the collapsed state */
+}
 .navbar-nav a{
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
     font-family: 'Antonio';
     font-size: 3vh;
     text-decoration: none;
