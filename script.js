@@ -108,7 +108,7 @@ jQuery(function () {
     });
 
     var texts = [
-        "'i promise'",
+        "'promise' minigame",
         "ILabs",
         "Concert Management",
         "Fetal Health Classification"
