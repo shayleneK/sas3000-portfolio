@@ -331,7 +331,7 @@ body {
 
 .navbar.navbar-expand-md {
     transition: width 0.3s ease; 
-    width: 396px;
+    width: 60vh;
 }
 
 .navbar-nav {
@@ -451,6 +451,9 @@ body {
 
 .contact-email {
     font-family: 'Antonio';
+    background: linear-gradient(to right, var(--clr-gradient)); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
 }
 
 .contact-email h1{
