@@ -162,5 +162,6 @@ jQuery(function () {
         $(this).text(progress[key]);
     }, function(){
         $(this).text("");
+        $(this).css("color", "#C45E72");
       });
 });
