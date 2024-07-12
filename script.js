@@ -116,7 +116,7 @@ jQuery(function () {
 
     var links = [
         "https://drive.google.com/drive/u/1/search?q=dvap",
-        "Lab Reservation System",
+        "https://github.com/fifthnoelle/APDEV-Website",
         "https://github.com/shayleneK/-CCINFOM-Concert-Management-System",
         "https://colab.research.google.com/drive/1w5xNHNAes3oVD_nNunwubbbw1ODW0BFS?authuser=1#scrollTo=4-Yuyqo2vDKl"
     ]
