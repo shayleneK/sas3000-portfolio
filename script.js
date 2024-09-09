@@ -111,14 +111,16 @@ jQuery(function () {
         "'promise' minigame",
         "ILabs",
         "Concert Management",
-        "Fetal Health Classification"
+        "Fetal Health Classification",
+        "Royal Farm Reservation Website"
     ]
 
     var links = [
         "https://drive.google.com/drive/u/1/search?q=dvap",
         "https://github.com/fifthnoelle/APDEV-Website",
         "https://github.com/shayleneK/-CCINFOM-Concert-Management-System",
-        "https://colab.research.google.com/drive/1w5xNHNAes3oVD_nNunwubbbw1ODW0BFS?authuser=1#scrollTo=4-Yuyqo2vDKl"
+        "https://colab.research.google.com/drive/1w5xNHNAes3oVD_nNunwubbbw1ODW0BFS?authuser=1#scrollTo=4-Yuyqo2vDKl",
+        "https://cssweng-grp-11.onrender.com/"
     ]
 
     var images = [
@@ -132,14 +134,16 @@ jQuery(function () {
         "A mini story game highlighting personal reflections on love and commitment. This game was made through GameMaker Studio 2.",
         "ILabs, a laboratory reservation system with both client and laboratory technician views that handles the creation and management of laboratory reservations.",
         "A concert management system allowing the operation of concert venues, concert, and tickets. A project eperimenting the functions and implementation of the SQL database.",
-        "A classification task that uses machine learning algorithms to classify the health of a fetus according to 2126 records of features taken from cardiotocogram exams."
+        "A classification task that uses machine learning algorithms to classify the health of a fetus according to 2126 records of features taken from cardiotocogram exams.",
+        "A resort reservation website designed to display the accomodations, offers, and rooms of the resort. In this project, I was mainly assigned to the Interfaces of the web application."
     ]
 
     var projectTags = [
         ["GameMaker 2", "GML"],
         ["HTML", "CSS", "MongoDB", "Ajax", "NodeJS", "Express"],
         ["HTML", "JSP", "SQL", "Java"],
-        ["Python"]
+        ["Python"],
+        ["HTML", "CSS", "hBS"]
     ]
 
     $('.projects-slick').on('afterChange', function(event, slick, currentSlide){

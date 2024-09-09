@@ -352,6 +352,7 @@ body {
 .navbar-toggler.collapsed {
     transform: rotate(180deg); /* Apply rotation to the collapsed state */
 }
+
 .navbar-nav a{
     color: var(--clr-secondary);
     font-family: 'Antonio';
