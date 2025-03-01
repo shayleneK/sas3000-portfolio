@@ -129,7 +129,8 @@ jQuery(function () {
         "images/drive.png",
         "images/github.png",
         "images/github.png",
-        "images/drive.png"
+        "images/drive.png",
+        "images/github.png"
     ]
 
     var descriptions = [
