@@ -434,11 +434,11 @@ body {
 
 #footer {
   background-color: var(--clr-bg);
+  height: 40vh;
 }
 
 .contacts-container {
   display: flex;
-  height: 40vh;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
