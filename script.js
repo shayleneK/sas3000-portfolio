@@ -103,7 +103,7 @@ jQuery(function () {
         prevArrow: $('.left'),
         nextArrow: $('.right'),
         dots: false,
-        infinite: true
+        infinite: false
         
     });
 
@@ -130,6 +130,7 @@ jQuery(function () {
         "images/github.png",
         "images/github.png",
         "images/drive.png",
+        "images/github.png",
         "images/github.png"
     ]
 
