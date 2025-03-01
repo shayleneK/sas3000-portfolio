@@ -103,7 +103,7 @@ jQuery(function () {
         prevArrow: $('.left'),
         nextArrow: $('.right'),
         dots: false,
-        infinite: false
+        infinite: true
         
     });
 
