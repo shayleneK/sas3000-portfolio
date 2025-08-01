@@ -12,11 +12,9 @@ var progress = {
 
 document.addEventListener("DOMContentLoaded", function () {
     const target = document.getElementById('target');
-    const navbar = document.getElementById('navbar');
     const skills = document.querySelector(".skills");
     const progressBars = document.querySelectorAll('.my-progress-bar');
     const main = document.getElementById('welcome');
-    const nav = document.getElementById('nav-bar');
     var welcome1 = false;
 
     function typeWriter(elemID, txt) {    
@@ -71,9 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         typeWriter("welcome-1", "HELLO WORLD, I'M");
                         typeWriter("welcome-2", "SHAY KINTANAR");
                     } 
-                    navbar.classList.add("navbar-expand-md");
             }else {
-                navbar.classList.remove("navbar-expand-md");
             }
         });
     };

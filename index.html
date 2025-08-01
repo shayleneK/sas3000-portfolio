@@ -8,27 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Shay Kintanar test</title>
 </head>
 
 <body>
-    <div class="nav-container" id="nav-container">
-        <nav id="navbar" class="navbar navbar-expand-md">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"><img src="images\logo.png" alt=""></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <div class="fixed top-0 left-0 w-full h-auto z-50" id="nav-container">
+    <nav id="navbar" class="flex flex-grow bg-[#191919] rounded-b px-4 py-2">
+        <p class="font-bold text-white">Shay</p>
+        <div class="ml-auto flex gap-4">
+            <a href="#about-me" class="text-white font-medium hover:text-[#9e3ba4]">About Me</a>
+            <a href="#skills" class="text-white font-medium hover:text-[#9e3ba4]">Skills</a>
+            <a href="#projects" class="text-white font-medium hover:text-[#9e3ba4]">Projects</a>
+            <a href="#footer" class="text-white font-medium hover:text-[#9e3ba4]">Contact</a>
+        </div>
+    </nav>
+</div>
+
 
     <div class="section" id="welcome">
         <span id="welcome-1"></span>
